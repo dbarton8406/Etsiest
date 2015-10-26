@@ -1,0 +1,142 @@
+.header
+{
+margin-left: 250;
+}
+ul.dansgrid {
+list-style: none;
+font-size: 0px;
+margin-left: 300;
+margin-right: 100;
+padding-right: 0;
+border:none;
+}
+ul.dansgrid li {
+font-size: 10;
+font-family: Guardian-egyptt;
+border-radius: 3px;
+background: #fff;
+width: 30.83%;
+display: inline-block;
+padding: 10px;
+padding-right: 15;
+margin: 0 0 2.5% 2.5%;
+position: relative;
+border: 1px solid #ddd;
+vertical-align: top;
+box-shadow: 1px 3px 0px #ddd;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+ul.dansgrid li a.image {
+font-family: Guardian-egyptt;
+text-decoration: none;
+color: black;
+}
+ul.dansgrid li a.image img {
+width: 220;
+height: auto;
+margin: 0 5 5 5;
+}
+ul.dansgrid li a.shop {
+font-family: Guardian-egyptt;
+text-decoration: none;
+color: #AAA
+}
+ul.dansgrid li a.shop:hover {
+font-family: Guardian-egyptt;
+text-decoration: underline;
+color: #AAA
+}
+ul.dansgrid li div {
+float:right;
+color: #78c042;;
+}
+.sideleft
+{
+float:left;
+width:230;
+max-height: 100%;
+margin-left: 100;
+}
+form {
+display: inline-block;
+vertical-align: 10px;
+}
+.header
+{
+vertical-align: top;
+}
+
+a:-webkit-any-link
+{
+color:#0192B5;
+text-decoration: none;
+font-size: 13;
+font-family: Arial:;
+}
+a:-webkit-any-link:hover
+{
+color:#0192B5;
+text-decoration: underline;
+}
+ul 
+{
+list-style-type: none;
+border:  1px solid #ddd;
+border-radius: 3px;
+height: 300;
+}
+
+ul.list-unstyled
+{
+border: 0;
+
+}
+h5{
+margin-left: 60px;
+color: black;
+}
+span
+{
+margin-left: 40px;
+color:black;
+}
+input[type="text"]{
+color: grey;
+height: 35px;
+width: 250px;
+display: inline;
+vertical-align: middle;
+padding: 0px;
+padding-left: 10px;
+margin: 0px 0px 3px 0px;
+border: 1px solid #CFCBC8;
+border-right: none;
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+font-size: 13px;
+}
+input[type="submit"]
+{
+background-color: #34A8C4;
+border-color: rgba(0, 0, 0, 0.1);
+color: #FFF;
+font-size: 14px;
+font-weight: bold;
+border-radius: 2px;
+text-align: center;
+height: 35px;
+display: inline;
+padding: 7px 15px 8px;
+margin-left: 0px;
+}
+
+.sell
+{
+ display: inline-block;
+vertical-align: 10px;
+margin-left: 200;  
+font-family: graphik;
+color: #0192B5;; 
+}

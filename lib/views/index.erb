@@ -1,0 +1,66 @@
+<head>
+	<title>whiskey - Etsy</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="grid.css">
+	<link rel="shortcut icon" href="https://www.etsy.com/images/favicon.ico">
+</head>
+<body>
+	<header>
+		<div class="header">
+			<img src ="https://www.etsy.com/assets/dist/images/etsylogo.20151016163845.png" />
+			<form action="/search.php" method="get">
+				<input type="text" name="q" placeholder="Search for items or shops"/>
+				<input type="submit" value="Search">
+			</form>
+			<a class="sell"href="#">Sell on Etsy</a>
+			<a href="default.asp">
+				<img src="IMG_1052.jpg">
+			</a>
+		</header>
+		<div class="sideleft">
+			<h5> Show results for:</h5>
+			<div class="panel">
+				<ul class="list-unstyled">
+					<span>All Categories</span>
+					<ul>
+						<li><a href="#">Home & Living</a></li>
+						<li><a href="#">Art & Collectibles</a></li>
+						<li><a href="#">Weddings</a></li>
+						<li><a href="#">Clothing</a></li>
+						<li><a href="#">Paper & Party Supplies</a></li>
+						<li><a href="#">Jewelry</a></li>
+						<li><a href="#">Accessories</a></li>
+						<li><a href="#">Craft Supplies & Tools</a></li>
+						<li><a href="#">Bags & Purses</a></li>
+						<li><a href="#">Bath & Beauty</a></li>
+						<li><a href="#">Shoes</a></li>
+						<li><a href="#">Books, Movies & Music</a></li>
+						<li><a href="#">Electronics & Accessories</a></li>
+						<li><a href="#">Toys & Games</a></li>
+						<li><a href="#">Pet Supplies</a></li>
+					</ul>
+				</div>
+			</div>
+			<div>
+				<ul class="dansgrid">
+					<%results.result.each do |listing|%>
+					<li>
+						<a class="image" href="<%= listing['url']%>">
+							<img src="<%= listing['Images'][0]['url_170x135'] %>" ><br />
+							<%= listing['title'][0..34] %>...
+						</a>
+						<br /><br />
+						
+						<a class="shop" href="<%= listing['Shop']['url']%>">
+							<%= listing['Shop']['shop_name'] %>
+						</a>
+						<div>
+							<%= listing['price'] %> <%= listing['currency_code'] %>
+						</div>
+						
+						
+					</li>
+					<%end%>
+				</ul>
+			</div>
+		</body>
