@@ -1,13 +1,12 @@
 .header
 {
-margin-left: 250;
+margin-left: 140;
 }
 ul.dansgrid {
 list-style: none;
 font-size: 0px;
 margin-left: 300;
 margin-right: 100;
-padding-right: 0;
 border:none;
 }
 ul.dansgrid li {
@@ -15,7 +14,7 @@ font-size: 10;
 font-family: Guardian-egyptt;
 border-radius: 3px;
 background: #fff;
-width: 30.83%;
+width: 28.83%;
 display: inline-block;
 padding: 10px;
 padding-right: 15;
@@ -56,7 +55,7 @@ color: #78c042;;
 {
 float:left;
 width:230;
-max-height: 100%;
+height: 100%;
 margin-left: 100;
 }
 form {
@@ -67,7 +66,6 @@ vertical-align: 10px;
 {
 vertical-align: top;
 }
-
 a:-webkit-any-link
 {
 color:#0192B5;
@@ -80,37 +78,39 @@ a:-webkit-any-link:hover
 color:#0192B5;
 text-decoration: underline;
 }
-ul 
+ul
 {
 list-style-type: none;
-border:  1px solid #ddd;
-border-radius: 3px;
-height: 300;
 }
-
 ul.list-unstyled
 {
-border: 0;
-
+border:  1px solid #ddd;
+line-height: 1.6;
+border-radius: 3px;
+vertical-align: 25px;
 }
 h5{
-margin-left: 60px;
+margin-top: -25px;
+margin-left: 0px;
 color: black;
+}
+.radio{
+border: 1px solid #ddd;
 }
 span
 {
-margin-left: 40px;
+margin-left: 30px;
 color:black;
 }
 input[type="text"]{
 color: grey;
-height: 35px;
+height: 31px;
 width: 250px;
 display: inline;
 vertical-align: middle;
 padding: 0px;
 padding-left: 10px;
-margin: 0px 0px 3px 0px;
+margin: 0px 0px 8px 0px;
 border: 1px solid #CFCBC8;
 border-right: none;
 border-top-right-radius: 0;
@@ -120,23 +120,138 @@ font-size: 13px;
 input[type="submit"]
 {
 background-color: #34A8C4;
-border-color: rgba(0, 0, 0, 0.1);
 color: #FFF;
 font-size: 14px;
 font-weight: bold;
-border-radius: 2px;
+border-bottom-right-radius:2px;
+border-top-right-radius:2px;
 text-align: center;
-height: 35px;
+height: 30px;
 display: inline;
 padding: 7px 15px 8px;
-margin-left: 0px;
+margin-left: -3px;
 }
-
+input[type="submit"]:hover
+{
+background-color: #0192B5;
+}
 .sell
 {
- display: inline-block;
-vertical-align: 10px;
-margin-left: 200;  
+font-size: 14px;
+text-decoration: none;
+box-sizing: border-box;
+border: 1px solid transparent;
+display: inline-block;
+vertical-align: 25px;
+margin-left: 200;
 font-family: graphik;
-color: #0192B5;; 
+color: #0192B5;;
+}
+.sidebar
+{
+height: 400px;
+text-align: left
+}
+input[type=radio],input[type=checkbox] {
+display: none;
+}
+input[type=radio] + label:before {
+content: "";
+display: inline-block;
+width: 17px;
+height: 17px;
+vertical-align: middle;
+margin-right: 8px;
+background-color: white;
+box-shadow: inset 0px 2px 2px rgba(0, 0, 0, .3);
+border-radius: 8px;
+}
+input[type=radio]:checked + label:before {
+content: "\2022"; /* Bullet */
+color: #0192B5;
+background-color: white;
+font-size: 2.6em;
+text-align: center;
+line-height: 19.5px;
+text-shadow: 0px 0px 3px #eee;
+}
+label
+{
+margin: 10px;
+}
+p.item
+{
+margin: 10px;
+opacity: .70;
+}
+hr{
+opacity: .50;
+}
+p.price
+{
+position: relative;
+bottom: 10px;
+margin: 10px;
+opacity: .70;
+margin-bottom: 0px;
+}
+p.filter
+{margin: 10px;
+opacity: .70;
+}
+textarea
+{
+padding-top: 15px;
+text-align: center;
+vertical-align: middle;
+resize: none;
+font-size: 12;
+opacity: 1;
+}
+textarea:hover
+{
+padding-top: 15px;
+text-align: center;
+vertical-align: middle;
+resize: none;
+font-size: 12;
+opacity: .50;
+}
+span
+{
+margin-left: 12;
+}
+ul
+{
+padding-left: 10px;
+}
+li.list-inline-item
+{
+display: inline;
+padding: 3px;
+}
+.swatch
+{
+border:1px solid #e2e2e2;
+}
+
+input[type=checkbox] + label:before {
+    content: "";  
+    display: inline-block;  
+    width: 15px;  
+    height: 15px;  
+    vertical-align:middle;
+    margin-right: 8px;  
+    background-color: white;  
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, .3);
+    border-radius: 4px;  
+}
+
+input[type=checkbox]:checked + label:before {
+    content:"\2714"; /* Tick */
+    color:#0192B5;
+    background-color: white; 
+    text-align:center;
+    line-height:15px;
+    text-shadow:0px 0px 3px #eee;
 }

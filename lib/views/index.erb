@@ -6,61 +6,154 @@
 </head>
 <body>
 	<header>
-		<div class="header">
-			<img src ="https://www.etsy.com/assets/dist/images/etsylogo.20151016163845.png" />
+		<div id="" class="header">
+			<a href="https://www.esty.com/?ref=logo"> <img src ="https://www.etsy.com/assets/dist/images/etsylogo.20151016163845.png" />
+			</a>
 			<form action="/search.php" method="get">
 				<input type="text" name="q" placeholder="Search for items or shops"/>
 				<input type="submit" value="Search">
 			</form>
 			<a class="sell"href="#">Sell on Etsy</a>
 			<a href="default.asp">
-				<img src="IMG_1052.jpg">
+				<img src=>
 			</a>
-		</header>
-		<div class="sideleft">
-			<h5> Show results for:</h5>
-			<div class="panel">
-				<ul class="list-unstyled">
-					<span>All Categories</span>
-					<ul>
-						<li><a href="#">Home & Living</a></li>
-						<li><a href="#">Art & Collectibles</a></li>
-						<li><a href="#">Weddings</a></li>
-						<li><a href="#">Clothing</a></li>
-						<li><a href="#">Paper & Party Supplies</a></li>
-						<li><a href="#">Jewelry</a></li>
-						<li><a href="#">Accessories</a></li>
-						<li><a href="#">Craft Supplies & Tools</a></li>
-						<li><a href="#">Bags & Purses</a></li>
-						<li><a href="#">Bath & Beauty</a></li>
-						<li><a href="#">Shoes</a></li>
-						<li><a href="#">Books, Movies & Music</a></li>
-						<li><a href="#">Electronics & Accessories</a></li>
-						<li><a href="#">Toys & Games</a></li>
-						<li><a href="#">Pet Supplies</a></li>
-					</ul>
-				</div>
-			</div>
-			<div>
-				<ul class="dansgrid">
-					<%results.result.each do |listing|%>
-					<li>
-						<a class="image" href="<%= listing['url']%>">
-							<img src="<%= listing['Images'][0]['url_170x135'] %>" ><br />
-							<%= listing['title'][0..34] %>...
-						</a>
-						<br /><br />
-						
-						<a class="shop" href="<%= listing['Shop']['url']%>">
-							<%= listing['Shop']['shop_name'] %>
-						</a>
-						<div>
-							<%= listing['price'] %> <%= listing['currency_code'] %>
-						</div>
-						
-						
-					</li>
-					<%end%>
+			<a href="https://www.etsy.com/?ref=hdr"><img src="home.png" onmouseover="this.src='homehover.png'" onmouseout="this.src='home.png'" /></a>
+			<a href="https://www.etsy.com/people/marbleminded/favorites?ref=hdr"><img src="favorites.png"onmouseover="this.src='favoritehover.png'"onmouseout="this.src='favorites.png'" /></a>
+			<a href="https://www.etsy.com/people/marbleminded?ref=hdr"><img src="you.png"onmouseover="this.src='youhover.png'"onmouseout="this.src='you.png'" /></a>
+			<a href="https://https://www.etsy.com/cart?ref=hdr"><img src="cart.png"onmouseover="this.src='carthover.png'"onmouseout="this.src='cart.png'" /></a>
+		</div><br />
+		<div id="cnav header" class="nav2"></div>
+	</header>
+	<div class="sideleft">
+		<h5> Show results for:</h5>
+		<div class="panel">
+			<ul class="list-unstyled">
+				<span>All Categories</span>
+				<ul class='sidebar'>
+					<li><a href="#">Home & Living</a></li>
+					<li><a href="#">Art & Collectibles</a></li>
+					<li><a href="#">Weddings</a></li>
+					<li><a href="#">Clothing</a></li>
+					<li><a href="#">Paper & Party Supplies</a></li>
+					<li><a href="#">Jewelry</a></li>
+					<li><a href="#">Accessories</a></li>
+					<li><a href="#">Craft Supplies & Tools</a></li>
+					<li><a href="#">Bags & Purses</a></li>
+					<li><a href="#">Bath & Beauty</a></li>
+					<li><a href="#">Shoes</a></li>
+					<li><a href="#">Books, Movies & Music</a></li>
+					<li><a href="#">Electronics & Accessories</a></li>
+					<li><a href="#">Toys & Games</a></li>
+					<li><a href="#">Pet Supplies</a></li>
 				</ul>
-			</div>
-		</body>
+			</ul><br><br>
+		</div>
+		<h5 class="search">Refine your search</h5>
+		<div class = "radio">
+			<p class="item">Item type</p>
+			<input type="radio" id="rb1" name="rb" onclick="location.href='https://www.etsy.com/search?q=whiskey';" value="All Items" checked>
+			<label for="rb1"><a href="https://www.etsy.com/search?q=whiskey">All Items</a></label>
+			<br>
+			<input type="radio" id="rb2" name="rb" onclick="location.href='https://www.etsy.com/search/handmade?q=whiskey';" value="Handmade">
+			<label for="rb2"><a href="https://www.etsy.com/search/handmade?q=whiskey">Handmade</a></label>
+			<br>
+			<input type="radio" id="rb3" name="rb" onclick="location.href='https://www.etsy.com/search/vintage?q=whiskey';" value="Vintage">
+			<label for="rb3"><a href="https://www.etsy.com/search/vintage?q=whiskey">Vintage</a></label>
+			<hr/>
+			<p class="price">Price<p/>
+			<textarea placeholder= rows="3" cols="7">$ Low</textarea>&nbspto&nbsp<textarea placeholder= rows="3" cols="7">$ High</textarea>&nbsp&nbsp<textarea placeholder= rows="3" cols="4">&#9658</textarea>
+			<hr/>
+			<p class="filter"> Filter by Color</p>
+			<div class="checkbox">
+			<ul class="colorbar">
+    <li class="list-inline-item mr-xs-0">
+        <a href="https://www.etsy.com/search?q=whiskey&amp;color=f40b32" title="View only red items" style="background-color: #f40b32;" class="swatch display-block red">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item mr-xs-0">
+        <a href="https://www.etsy.com/search?q=whiskey&amp;color=ff7f00" title="View only orange items" style="background-color: #ff7f00;" class="swatch display-block orange">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item mr-xs-0">
+        <a href="https://www.etsy.com/search?q=whiskey&amp;color=f3cc0c" title="View only yellow items" style="background-color: #f3cc0c;" class="swatch display-block yellow">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item mr-xs-0">
+        <a href="https://www.etsy.com/search?q=whiskey&amp;color=0ac20a" title="View only green items" style="background-color: #0ac20a;" class="swatch display-block green">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item mr-xs-0">
+        <a href="https://www.etsy.com/search?q=whiskey&amp;color=0cccf3" title="View only blue items" style="background-color: #0cccf3;" class="swatch display-block blue">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item mr-xs-0">
+        <a href="https://www.etsy.com/search?q=whiskey&amp;color=a60cf3" title="View only purple items" style="background-color: #a60cf3;" class="swatch display-block purple">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item mr-xs-0">
+        <a href="https://www.etsy.com/search?q=whiskey&amp;color=000000" title="View only black items" style="background-color: #000000;" class="swatch display-block black">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+    <li class="list-inline-item mr-xs-0">
+        <a href="https://www.etsy.com/search?q=whiskey&amp;color=ffffff" title="View only white items" style="background-color: #ffffff;" class="swatch display-block white">
+            <span class="icon-smaller ss-icon "></span>
+            &nbsp;
+        </a>
+    </li>
+</ul>
+<hr>
+<div class="checkbox">
+<p class="item">Item type</p>
+<input type="checkbox" id="chk_1" name="chk_1 onclick="location.href="
+ value="In Your Favorites"/>
+<label for="chk_1">In Your Favorites</label></div>
+<div><input type="checkbox" id="chk_2" name="chk_2" value="Accepts Etsy Gift Cards"/>
+<label for="chk_2">Accepts Etsy Gift Cards</label></div>
+<div><input type="checkbox" id="chk_3" name="chk_3" value="Customizable"/>
+<label for="chk_3">Customizable</label></div>
+<hr>
+<hr>
+		</div>
+	</div>
+	<div>
+	
+        </div>
+		
+	</div>
+	<div>
+		<ul class="dansgrid">
+			<%results.result.each do |listing|%>
+			<li>
+				<a class="image" href="<%= listing['url']%>">
+					<img src="<%= listing['Images'][0]['url_170x135'] %>" ><br />
+					<%= listing['title'][0..34] %>...
+				</a>
+				<br /><br />
+				
+				<a class="shop" href="<%= listing['Shop']['url']%>">
+					<%= listing['Shop']['shop_name'] %>
+				</a>
+				<div>
+					<%= listing['price'] %> <%= listing['currency_code'] %>
+				</div>
+				
+				
+			</li>
+			<%end%>
+		</ul>
+	</div>
+</body>
