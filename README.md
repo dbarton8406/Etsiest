@@ -1,4 +1,7 @@
 # Etsiest
+![Image of localhost3000](https://cloud.githubusercontent.com/assets/14100111/11482830/00e2f274-9773-11e5-8923-6ca1f5af43b9.png)
+
+![Image of localhost3000](https://cloud.githubusercontent.com/assets/14100111/11482829/00deffb6-9773-11e5-8584-65c726272a77.png)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/etsiest`. To experiment with that code, run `bin/console` for an interactive prompt.
 
